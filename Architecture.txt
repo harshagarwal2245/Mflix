@@ -1,0 +1,65 @@
+
+
+Here is an overview of the structure using the tree command in my terminal.
+
+The README.rst file contains detailed instructions for setting up your environment as well as information about the layout of the project.
+
+The data directory contains all of the source data we'll be using for the mflix application.
+
+The dotini file here will be modified and renamed by you in this course, and it's going to contain information so that the application can connect to your Atlas cluster, as well as other information that the application will use internally.
+
+More on that later.
+
+There are two directories under the mflix directory-- api and build.
+
+	Api contains some flask root handlers for the application, and build contains the front end application.
+
+	Both of these are completed for you to allow you to focus solely on learning to use PyMongo with MongoDB.
+
+	One note-- a few sections will have you edit the index style HTML file if necessary.
+
+	You can find it under and mflix, build, index.html.
+
+
+The db.py file is where most of your effort will be focused.
+
+	It contains all of the methods that interact with the database.
+
+	Initially, most of these would just be stubs that you will have to fill out with the required functionality.
+
+	You do not need to have MongoDB installed, as you'll be using your own MongoDB Atlas cluster.
+
+
+Factory.py contains functionality that assembles the FOS application for running.
+
+	You don't have to modify this file.
+
+Lastly, the tests directory contains all of the unit tests.
+
+	Throughout the course, you'll be presented with labs that we call tickets.
+
+	These will contain a user story or some other instructions, along with instructions for running the particular test suite for that ticket.
+
+	Once all of the tests are passing for that particular task, you'll go to the status page and the UI.
+
+	And that sums up the application architecture.
+
+Summary:
+
+   	 Remember to read the README.rst file, as it contains detailed setup instructions.
+  
+	The API layer that handles requests when the application is running is implemented in movies.py and user.py.
+
+	Feel free to look at these files, but do not modify them, as doing so may prevent the UI from validating correctly.
+
+	Db.py is where all of the methods that interact with Atlas are located and where you will be doing all of your implementation.
+
+	The tests directory contains all of the unit tests.
+
+   		Make sure you read them to see what is being passed into the methods.
+
+   		We also highly recommend that you focus on making one test pass at a time.
+
+                 If there are four or five unit tests within the test file, write enough functionality to make one test pass.
+
+  Trying to make all of the tests pass on your first try can lead to a lot of frustration.

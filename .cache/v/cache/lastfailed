@@ -4,5 +4,10 @@
   "tests/test_db_connection.py::test_search_by_movie_id": true,
   "tests/test_db_connection.py::test_simple_text_search": true,
   "tests/test_projection.py::test_basic_country_search_db": true,
-  "tests/test_projection.py::test_basic_country_search_shape_db": true
+  "tests/test_projection.py::test_basic_country_search_shape_db": true,
+  "tests/test_text_and_subfield_search.py::test_cast_search": true,
+  "tests/test_text_and_subfield_search.py::test_genre_search": true,
+  "tests/test_text_and_subfield_search.py::test_multiple_cast_search": true,
+  "tests/test_text_and_subfield_search.py::test_multiple_genre_search": true,
+  "tests/test_text_and_subfield_search.py::test_text_search": true
 }

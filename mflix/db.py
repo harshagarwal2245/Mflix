@@ -420,7 +420,8 @@ def add_user(name, email, hashedpw):
             "name": name,
             "email": email,
             "password":hashedpw
-        })
+        },
+          { writeConcern: { w: "majority" , wtimeout: 5000 } })
         return {"success": True}
     except DuplicateKeyError:
         return {"error": "A user with the given email already exists."}

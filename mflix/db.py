@@ -271,6 +271,18 @@ def get_movie(id):
                 "$match": {
                     "_id": ObjectId(id)
                 }
+            },
+             {
+                "$lookup": {
+                    "from": 'comments',
+                    "let": { 'id': '$_id' },
+                    "pipeline": [
+                        { '$match':
+                            { '$expr': { '$eq': [ '$movie_id', '$$id' ] } }
+                        }
+                    ],
+                    "as": 'comments'
+                }
             }
         ]
 

@@ -1,4 +1,8 @@
 {
+  "tests/test_create_update_comments.py::test_add_comment": true,
+  "tests/test_create_update_comments.py::test_delete_is_given": true,
+  "tests/test_create_update_comments.py::test_do_not_update_comment_if_is_not_owner": true,
+  "tests/test_create_update_comments.py::test_update_comment": true,
   "tests/test_db_connection.py::test_atlas_setup": true,
   "tests/test_db_connection.py::test_basic_movies": true,
   "tests/test_db_connection.py::test_search_by_movie_id": true,

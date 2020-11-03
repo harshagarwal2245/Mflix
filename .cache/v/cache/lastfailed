@@ -16,5 +16,8 @@
   "tests/test_user_management.py::test_login": true,
   "tests/test_user_management.py::test_logout": true,
   "tests/test_user_management.py::test_no_duplicate_registrations": true,
-  "tests/test_user_management.py::test_registration": true
+  "tests/test_user_management.py::test_registration": true,
+  "tests/test_user_preferences.py::test_empty_prefs_are_valid": true,
+  "tests/test_user_preferences.py::test_should_not_allow_None_as_prefs": true,
+  "tests/test_user_preferences.py::test_valid_user_preferences": true
 }

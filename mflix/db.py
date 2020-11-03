@@ -420,8 +420,7 @@ def add_user(name, email, hashedpw):
             "name": name,
             "email": email,
             "password":hashedpw
-        },
-          { writeConcern: { w: "majority" , wtimeout: 5000 } })
+        })
         return {"success": True}
     except DuplicateKeyError:
         return {"error": "A user with the given email already exists."}
@@ -514,9 +513,7 @@ def update_prefs(email, prefs):
         # TODO: User preferences
         # Use the data in "prefs" to update the user's preferences.
         response = db.users.update_one(
-            { "some_field": "some_value" },
-            { "$set": { "some_other_field": "some_other_value" } }
-        )
+            {"email": email}, {"$set": {"preferences": prefs}})
         if response.matched_count == 0:
             return {'error': 'no user found'}
         else:

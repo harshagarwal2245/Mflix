@@ -21,6 +21,7 @@
   "tests/test_text_and_subfield_search.py::test_multiple_cast_search": true,
   "tests/test_text_and_subfield_search.py::test_multiple_genre_search": true,
   "tests/test_text_and_subfield_search.py::test_text_search": true,
+  "tests/test_timeouts.py::test_proper_type": true,
   "tests/test_user_management.py::test_login": true,
   "tests/test_user_management.py::test_logout": true,
   "tests/test_user_management.py::test_no_duplicate_registrations": true,

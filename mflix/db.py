@@ -385,7 +385,7 @@ def delete_comment(comment_id, user_email):
 
     # TODO: Delete Comments
     # Use the user_email and comment_id to delete the proper comment.
-    response = db.comments.delete_one( { "_id":ObjectId(comment_id),"email": user_email }).sort({"date":1})
+    response = db.comments.delete_one( { "_id":ObjectId(comment_id),"email": user_email })
     return response
 
 

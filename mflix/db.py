@@ -385,7 +385,7 @@ def delete_comment(comment_id, user_email):
 
     # TODO: Delete Comments
     # Use the user_email and comment_id to delete the proper comment.
-    response = db.comments.delete_one( { "_id": ObjectId(comment_id) } )
+    response = db.comments.delete_one( { "_id":ObjectId(comment_id),"email": user_email }).sort({"date":1})
     return response
 
 
@@ -503,7 +503,7 @@ def delete_user(email):
         # TODO: User Management
         # Delete the corresponding documents from `users` and `sessions`.
         db.sessions.delete_one({ "user_id": email })
-        db.users.delete_one({ email: email })
+        db.users.delete_one({ "email": email })
         if get_user(email) is None:
             return {"success": True}
         else:
@@ -555,7 +555,24 @@ def most_active_commenters():
     """
     # TODO: User Report
     # Return the 20 users who have commented the most on MFlix.
-    pipeline = []
+    pipeline = [
+          {
+            "$group": {
+                "_id": "$email",
+                "count": {
+                    "$sum": 1
+                }
+            }
+        },
+        {
+            "$sort": {
+                "count": -1
+            }
+        },
+        {
+            "$limit": 20
+        }
+    ]
 
     rc = db.comments.read_concern # you may want to change this read concern!
     comments = db.comments.with_options(read_concern=rc)

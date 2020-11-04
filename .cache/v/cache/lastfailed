@@ -7,6 +7,9 @@
   "tests/test_db_connection.py::test_basic_movies": true,
   "tests/test_db_connection.py::test_search_by_movie_id": true,
   "tests/test_db_connection.py::test_simple_text_search": true,
+  "tests/test_delete_comments.py::test_add_comment_should_be_implemented": true,
+  "tests/test_delete_comments.py::test_delete_comment_should_delete_if_email_is_owner": true,
+  "tests/test_delete_comments.py::test_should_not_delete_comment_if_email_does_not_match": true,
   "tests/test_paging.py::test_supports_paging_by_cast": true,
   "tests/test_paging.py::test_supports_paging_by_genre": true,
   "tests/test_paging.py::test_supports_paging_by_text": true,
@@ -23,5 +26,7 @@
   "tests/test_user_management.py::test_registration": true,
   "tests/test_user_preferences.py::test_empty_prefs_are_valid": true,
   "tests/test_user_preferences.py::test_should_not_allow_None_as_prefs": true,
-  "tests/test_user_preferences.py::test_valid_user_preferences": true
+  "tests/test_user_preferences.py::test_valid_user_preferences": true,
+  "tests/test_user_report.py::test_cast_popularity": true,
+  "tests/test_user_report.py::test_check_report": true
 }
